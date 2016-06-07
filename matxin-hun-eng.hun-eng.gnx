@@ -1,0 +1,10 @@
+<generate>
+  <def-rule comment="Generate the morphological information for nouns">
+    <template match="//NODE[@pos = 'n']">
+      <copy>
+        <attr name="mi"><value-of select="concat(@pos, '|', @nbr)"/></attr>
+        <copy-of select="@*[name()!='mi'] | *"/>
+      </copy>
+    </template>
+  </def-rule>
+</generate>

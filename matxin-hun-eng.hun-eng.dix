@@ -1,0 +1,56 @@
+<dictionary>
+  <sdefs>
+    <sdef n="mi"     c="Morphological information"/>
+    <sdef n="pos"    c="Part of speech"/>
+    <sdef n="nbr"    c="Number"/>
+    <sdef n="prs"    c="Person"/>
+    <sdef n="cas"    c="Case"/>
+    <sdef n="tns"    c="Tense"/>
+    <sdef n="deft"   c="Definitieness"/>
+    <sdef n="vtype"  c="Verb Type"/>
+  </sdefs>
+  
+  <pardefs>
+     <pardef n="n__n"> 
+          <e><p><l>|nom</l><r><s n="cas"/>nom</r></p></e>
+          <e><p><l>|acc</l><r><s n="cas"/>acc</r></p></e>
+          <e><p><l>|sup</l><r><s n="cas"/>sup</r></p></e>
+          <e><p><l>|ine</l><r><s n="cas"/>ine</r></p></e>
+      </pardef>
+     
+     <pardef n="num">
+        <e><p><l>|pl</l><r><s n="nbr"/>pl</r></p><par n="n__n"/></e>
+        <e><p><l>|sg</l><r><s n="nbr"/>sg</r></p><par n="n__n"/></e>
+        <e><p><l>|pl</l><r><s n="nbr"/>pl</r></p></e>
+        <e><p><l>|sg</l><r><s n="nbr"/>sg</r></p></e>
+     </pardef>
+      
+     <pardef n="pers"> 
+          <e><p><l>|p1</l><r><s n="prs"/>p1</r></p><par n="num"/></e>
+          <e><p><l>|p2</l><r><s n="prs"/>p2</r></p><par n="num"/></e>
+          <e><p><l>|p3</l><r><s n="prs"/>p3</r></p><par n="num"/></e>
+      </pardef>
+    
+     <pardef n="tense">
+          <e><p><l>|past</l><r><s n="tns"/>past</r></p><par n="pers"/></e>
+      </pardef>
+      
+      <pardef n="type">
+          <e><p><l>|pot</l><r><s n="vtype"/>pot</r></p><par n="tense"/></e>
+      </pardef>      
+  </pardefs>
+  
+  <section id="main" type="standard">
+        <e><p><l>a<s n="mi"/>det|def</l><r>the<s n="pos"/>det|def</r></p></e>
+        <e><p><l>át<s n="mi"/>pr</l><r>through<s n="pos"/>pr</r></p></e>
+        <e><p><l>.<s n="mi"/>sent</l><r>.<s n="pos"/>sent</r></p></e>
+        <e><p><l>ház<s n="mi"/>n</l><r>house<s n="pos"/>n</r></p><par n="num"/></e>
+        <e><p><l>lát<s n="mi"/>v|def</l><r>see<s n="pos"/>v</r></p><par n="type"/></e>
+        <e><p><l>ablak<s n="mi"/>n|px3sg</l><r>window<s n="pos"/>n<s n="vtype"/>px3sg</r></p><par n="num"/></e>
+        <e><p><l>nyitott<s n="mi"/>adj</l><r>open<s n="pos"/>adj</r></p></e>
+        <e><p><l>csoport<s n="mi"/>n</l><r>group<s n="pos"/>n</r></p><par n="num"/></e>
+        <e><p><l>sűrű<s n="mi"/>adj</l><r>dense<s n="pos"/>adj</r></p></e>
+        <e><p><l>holt<s n="mi"/>n</l><r>dead<s n="pos"/>n</r></p><par n="num"/></e>
+  </section>
+</dictionary>
+

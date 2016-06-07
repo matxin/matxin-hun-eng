@@ -1,0 +1,14 @@
+# HEAD		DEPENDENT	    RELPOS	ORDER
+si='root'	lem='.'		    .*?	    x1.x2
+si='root'   si='dobj'       .*?     x1.x2
+si='root'   si='nsubj'      .*?     x2.x1
+si='root'   si='aux'        .*?     x2+x1
+si='root'   si='advmod'     .*?     x1.x2
+
+pos='n'     pos='det'       .*?     x2.x1
+pos='n'     si='nmod'       .*?     x2+x1
+pos='n'     pos='n'         .*?     x1.x2
+pos='n'     si='prep|poss'  .*?     x1+x2
+
+pos='pr'    pos='n'         .*?     x1.x2
+

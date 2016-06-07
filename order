@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corpus>
+  <SENTENCE ord="1" ref="1" alloc="0">
+    <NODE ord="11" alloc="0" si="root" ref="8" slem="lát" smi="v|def|pot|past|p1|pl" UpCase="none" lem="see" pos="v" vtype="pot" tns="past" prs="p1" nbr="pl">
+      <NODE ord="0" alloc="0" si="dep" ref="5" slem="át" smi="pr" UpCase="none" lem="through" pos="pr">
+        <NODE ord="3" alloc="0" si="case" ref="4" slem="ablak" smi="n|px3sg|pl|sup" UpCase="none" lem="window" pos="n" vtype="px3sg" nbr="pl" cas="sup">
+          <NODE ord="8" alloc="0" si="case" ref="2" slem="ház" smi="n|pl|nom" UpCase="none" lem="house" pos="n" nbr="pl" cas="nom">
+            <NODE ord="7" alloc="0" si="nmod" ref="1" slem="a" smi="det|def" UpCase="none" lem="the" pos="det|def"/>
+          </NODE>
+          <NODE ord="2" alloc="0" si="nmod" ref="3" slem="nyitott" smi="adj" UpCase="none" lem="open" pos="adj"/>
+          <NODE ord="1" ref="new-0" si="det" lem="the" pos="det|def" nbr="sp"/>
+          <NODE ord="4" ref="new-1" si="prep|poss" lem="of" pos="prep"/>
+        </NODE>
+      </NODE>
+      <NODE ord="14" alloc="0" si="advmod" ref="7" slem="csoport" smi="n|pl|ine" UpCase="none" lem="group" pos="n" nbr="pl" cas="ine">
+        <NODE ord="13" alloc="0" si="nmod" ref="6" slem="sűrű" smi="adj" UpCase="none" lem="dense" pos="adj"/>
+        <NODE ord="12" ref="new-2" si="prep|loc" lem="in" pos="prep"/>
+      </NODE>
+      <NODE ord="16" alloc="0" si="dobj" ref="10" slem="holt" smi="n|pl|acc" UpCase="none" lem="dead" pos="n" nbr="pl" cas="acc">
+        <NODE ord="15" alloc="0" si="nmod" ref="9" slem="a" smi="det|def" UpCase="none" lem="the" pos="det|def"/>
+      </NODE>
+      <NODE ord="17" alloc="0" si="punct" ref="11" slem="." smi="sent" UpCase="none" lem="." pos="sent"/>
+      <NODE ord="10" ref="new-3" si="aux" lem="can" pos="vaux" tense="past"/>
+      <NODE ord="9" ref="new-4" si="nsubj" pos="prn|pers" prs="p1" nbr="pl" cas="nom"/>
+    </NODE>
+  </SENTENCE>
+</corpus>

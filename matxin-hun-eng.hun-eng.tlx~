@@ -1,0 +1,51 @@
+<transfer>
+  <def-rule comment="Add definite article if superessive">
+    <template match="//NODE[@pos = 'n' and @cas = 'sup']">
+      <copy>
+         <apply-templates select="@* | *"/>
+         <NODE si="det" lem="the" pos="det|def" nbr="sp"/>
+      </copy> 
+    </template>
+  </def-rule>
+  <def-rule comment="Add could">
+    <template match="//NODE[@pos = 'v' and @vtype = 'pot']">
+      <copy>
+         <apply-templates select="@* | *"/>
+         <NODE si="aux" lem="can" pos="vaux" tense="past"/>
+      </copy> 
+    </template>
+  </def-rule>
+  <def-rule comment="Add subject pronoun if it is dropped in source">
+    <template match="//NODE[@pos = 'v' and not(.//NODE[@si = 'nsubj'])]">
+      <copy>
+         <apply-templates select="@* | *"/>
+         <NODE><attr name="si">nsubj</attr>
+            <choose>
+                <when test="@prs = 'pl' and @nbr = 'pl'">
+                    <attr name = "lem">we</attr>
+                </when>
+            </choose>
+            <attr name = "pos">prn|pers</attr>
+            <attr name="prs"><value-of select="@prs"/></attr>
+            <attr name="nbr"><value-of select="@nbr"/></attr>
+            <attr name="cas">nom</attr></NODE>
+      </copy> 
+    </template>
+  </def-rule>
+  <def-rule comment="Add preposition as parent node for inessive nouns">
+    <template match="NODE[@pos = 'n' and @cas = 'ine']">
+        <copy>
+            <apply-templates select="@* | *"/>
+            <NODE si="prep" lem="in" pos="in"/>
+        </copy>        
+    </template>
+  </def-rule>
+  <def-rule comment="Add genitive prep">
+    <template match="NODE[@pos = 'n' and @cas = 'ine']">
+        <copy>
+            <apply-templates select="@* | *"/>
+            <NODE si="prep" lem="in" pos="in"/>
+        </copy>        
+    </template>
+  </def-rule>
+</transfer>
